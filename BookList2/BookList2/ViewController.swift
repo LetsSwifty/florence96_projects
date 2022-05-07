@@ -34,7 +34,6 @@ class ViewController: UIViewController, BookListCellDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         pageTitle.text = "책 목록"
         tableViewDelegate()
     }
@@ -52,23 +51,13 @@ class ViewController: UIViewController, BookListCellDelegate {
     
     func starSelected(index: Int) {
         if !status[index] {
-            let alert = UIAlertController(title: nil, message: "도서가 선택되었습니다.", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "확인", style: .default) { _ in
+            alertWithOK(vc: self, message: "도서가 선택되었습니다.") {
                 self.status[index] = !self.status[index]
                 self.books.append(self.bookData[index])
                 self.tableView.reloadData()
             }
-            
-            alert.view.tintColor = UIColor.black
-            alert.addAction(ok)
-            self.present(alert, animated: true)
         } else {
-            let alert = UIAlertController(title: nil, message: "이미 선택된 도서입니다.", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
-            
-            alert.view.tintColor = UIColor.black
-            alert.addAction(ok)
-            self.present(alert, animated: true)
+            alertWithOK(vc: self, message: "이미 선택된 도서입니다.") {}
         }
     }
     

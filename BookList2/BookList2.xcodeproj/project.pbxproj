@@ -17,6 +17,7 @@
 		8BBA54AF282658A90011DE8A /* BookListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBA54AE282658A90011DE8A /* BookListCell.swift */; };
 		8BBA54B1282662B20011DE8A /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBA54B0282662B20011DE8A /* BookModel.swift */; };
 		8BBA54B32826CDBE0011DE8A /* MyPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBA54B22826CDBE0011DE8A /* MyPageCell.swift */; };
+		8BBA54B72826ECF40011DE8A /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBA54B62826ECF40011DE8A /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		8BBA54AE282658A90011DE8A /* BookListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListCell.swift; sourceTree = "<group>"; };
 		8BBA54B0282662B20011DE8A /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 		8BBA54B22826CDBE0011DE8A /* MyPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageCell.swift; sourceTree = "<group>"; };
+		8BBA54B62826ECF40011DE8A /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				8BBA54AE282658A90011DE8A /* BookListCell.swift */,
 				8BBA54AC282658830011DE8A /* MyPageVC.swift */,
 				8BBA54B22826CDBE0011DE8A /* MyPageCell.swift */,
+				8BBA54B62826ECF40011DE8A /* Alert.swift */,
 				8BBA5482282650940011DE8A /* Main.storyboard */,
 				8BBA5485282650970011DE8A /* Assets.xcassets */,
 				8BBA5487282650970011DE8A /* LaunchScreen.storyboard */,
@@ -251,6 +254,7 @@
 				8BBA54AF282658A90011DE8A /* BookListCell.swift in Sources */,
 				8BBA547D282650940011DE8A /* AppDelegate.swift in Sources */,
 				8BBA54AD282658830011DE8A /* MyPageVC.swift in Sources */,
+				8BBA54B72826ECF40011DE8A /* Alert.swift in Sources */,
 				8BBA547F282650940011DE8A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

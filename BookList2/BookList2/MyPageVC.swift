@@ -37,35 +37,20 @@ class MyPageVC: UIViewController, MyPageDelegate {
     
     func checkBookisEmpty(){
         if books.isEmpty {
-            let alert = UIAlertController(title: nil, message: "저장된 도서가 없습니다.", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "확인", style: .default) { _ in
+            alertWithOK(vc: self, message: "저장된 도서가 없습니다.") {
                 let vc = self.navigationController?.viewControllers[0] as! ViewController
                 vc.books = self.books
                 self.navigationController?.popViewController(animated: true)
             }
-            
-            alert.addAction(ok)
-            alert.view.tintColor = UIColor.black
-            
-            self.present(alert, animated: true)
         }
     }
     
     func deleteBook(index: Int?) {
-        let alert = UIAlertController(title: nil, message: "도서를 삭제하시겠습니까?", preferredStyle: .alert)
-        let ok = UIAlertAction(title: "네", style: .default) { _ in
+        alertWithOKandCancel(vc: self, message: "도서를 삭제하시겠습니까?") {
             self.books.remove(at: index!)
             self.tableView.reloadData()
             self.checkBookisEmpty()
         }
-        
-        let cancel = UIAlertAction(title: "아니요", style: .default, handler: nil)
-        
-        alert.addAction(ok)
-        alert.addAction(cancel)
-        alert.view.tintColor = UIColor.black
-        
-        self.present(alert, animated: true)
     }
 }
 
