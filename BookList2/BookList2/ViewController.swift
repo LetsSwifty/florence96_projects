@@ -41,7 +41,8 @@ class ViewController: UIViewController, BookListCellDelegate {
         APIRequest.getBookList(){
             let items = APIRequest.items as! [[String: String]]
             for item in items {
-                let data = Book(name: item["title"]!, detail: item["author"]!, thumbnail: item["image"]!)
+                let title = item["title"]?.replacingOccurrences(of: "<b>", with: "").replacingOccurrences(of: "</b>", with: "")
+                let data = Book(name: title!, detail: item["author"]!, thumbnail: item["image"]!)
                 self.bookData.append(data)
             }
             self.defaultStatus()

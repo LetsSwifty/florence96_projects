@@ -28,7 +28,7 @@ class BookListCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        bookTitle.numberOfLines = 1
+        bookTitle.numberOfLines = 2
         bookAuthor.numberOfLines = 0
         starStatus(status: status)
     }
