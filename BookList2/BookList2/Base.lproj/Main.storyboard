@@ -114,6 +114,9 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="person" catalog="system"/>
+                                <connections>
+                                    <action selector="personalTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I5H-k8-r35"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="pgs-8D-qZZ">
@@ -131,6 +134,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="pageTitle" destination="doo-pK-y8w" id="mmS-Tn-Fgt"/>
+                        <outlet property="personalTest" destination="9aL-y9-PoP" id="AB7-Z2-XUd"/>
                         <outlet property="tableView" destination="0cc-lE-qQD" id="XjH-sX-VdA"/>
                     </connections>
                 </viewController>

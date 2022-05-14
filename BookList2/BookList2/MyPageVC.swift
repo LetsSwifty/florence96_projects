@@ -61,9 +61,10 @@ extension MyPageVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = indexPath.row
+        let image = try! Data(contentsOf: URL(string: books[row].thumbnail!)!)
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyPageCell", for: indexPath) as! MyPageCell
         cell.index = row
-        cell.bookImage.image = UIImage(named: books[row].thumbnail!)
+        cell.bookImage.image = UIImage(data: image)
         cell.bookTitle.text = books[row].name
         cell.delegate = self
         return cell
@@ -72,5 +73,9 @@ extension MyPageVC: UITableViewDelegate, UITableViewDataSource {
     func tableViewDelegate(){
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
     }
 }
