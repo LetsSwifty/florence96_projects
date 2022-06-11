@@ -9,7 +9,7 @@ import Foundation
 
 class APIRequest {
     static let client_id = "uJu11dvRsLD_5pD3Tlay"
-    static let client_secret = "djzxJ7FjfG"
+    static let client_secret = "g8bDFbXdeW"
     static var items: Any?
     
     static func getBookList(result: @escaping () -> ()){

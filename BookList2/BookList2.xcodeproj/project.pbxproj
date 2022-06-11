@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8B16D176283005C000F1AECC /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B16D175283005C000F1AECC /* APIManager.swift */; };
+		8B6E7F6F283BD0E400346E8A /* BookListCellinXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E7F6D283BD0E400346E8A /* BookListCellinXib.swift */; };
+		8B6E7F70283BD0E400346E8A /* BookListCellinXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B6E7F6E283BD0E400346E8A /* BookListCellinXib.xib */; };
 		8BBA547D282650940011DE8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBA547C282650940011DE8A /* AppDelegate.swift */; };
 		8BBA547F282650940011DE8A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBA547E282650940011DE8A /* SceneDelegate.swift */; };
 		8BBA5481282650940011DE8A /* BookListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBA5480282650940011DE8A /* BookListVC.swift */; };
@@ -40,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		8B16D175283005C000F1AECC /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		8B6E7F6D283BD0E400346E8A /* BookListCellinXib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListCellinXib.swift; sourceTree = "<group>"; };
+		8B6E7F6E283BD0E400346E8A /* BookListCellinXib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookListCellinXib.xib; sourceTree = "<group>"; };
 		8BBA5479282650940011DE8A /* BookList2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookList2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BBA547C282650940011DE8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BBA547E282650940011DE8A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,17 +135,27 @@
 		8BBA547B282650940011DE8A /* BookList2 */ = {
 			isa = PBXGroup;
 			children = (
+				8BC48680283BC108009A754D /* View */,
 				8B9A072228301FF00058D9D0 /* Manager */,
 				8B9A072128301FD90058D9D0 /* Model */,
 				8B9A072028301FC30058D9D0 /* ViewControllers */,
 				8BBA547C282650940011DE8A /* AppDelegate.swift */,
 				8BBA547E282650940011DE8A /* SceneDelegate.swift */,
-				8BBA5482282650940011DE8A /* Main.storyboard */,
 				8BBA5485282650970011DE8A /* Assets.xcassets */,
 				8BBA5487282650970011DE8A /* LaunchScreen.storyboard */,
 				8BBA548A282650970011DE8A /* Info.plist */,
 			);
 			path = BookList2;
+			sourceTree = "<group>";
+		};
+		8BC48680283BC108009A754D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8BBA5482282650940011DE8A /* Main.storyboard */,
+				8B6E7F6D283BD0E400346E8A /* BookListCellinXib.swift */,
+				8B6E7F6E283BD0E400346E8A /* BookListCellinXib.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +265,7 @@
 				8BBA5489282650970011DE8A /* LaunchScreen.storyboard in Resources */,
 				8BBA5486282650970011DE8A /* Assets.xcassets in Resources */,
 				8BBA5484282650940011DE8A /* Main.storyboard in Resources */,
+				8B6E7F70283BD0E400346E8A /* BookListCellinXib.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +299,7 @@
 				8BBA54AD282658830011DE8A /* MyPageVC.swift in Sources */,
 				8BBA54B72826ECF40011DE8A /* AlertManager.swift in Sources */,
 				8BBA547F282650940011DE8A /* SceneDelegate.swift in Sources */,
+				8B6E7F6F283BD0E400346E8A /* BookListCellinXib.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

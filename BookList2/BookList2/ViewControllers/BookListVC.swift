@@ -18,6 +18,11 @@ class ViewController: UIViewController, BookListCellDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //xib cell 등록
+        let nibName = UINib(nibName: "BookListCellinXib", bundle: nil)
+        tableView.register(nibName, forCellReuseIdentifier: "BookCell")
+        
         pageTitle.text = "책 목록"
         
         APIRequest.getBookList(){
@@ -60,12 +65,12 @@ class ViewController: UIViewController, BookListCellDelegate {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    func starSelected(index: Int) {
-        if !status[index] {
+    func starSelected(index: IndexPath) {
+        if !status[index.row] {
             alertWithOK(vc: self, message: "도서가 선택되었습니다.") {
-                self.status[index] = !self.status[index]
-                self.books.append(self.bookData[index])
-                self.tableView.reloadData()
+                self.status[index.row] = !self.status[index.row]
+                self.books.append(self.bookData[index.row])
+                self.tableView.reloadRows(at: [index], with: .automatic)
             }
         } else {
             alertWithOK(vc: self, message: "이미 선택된 도서입니다.") {}
@@ -90,13 +95,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = indexPath.row
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BookListCell", for: indexPath) as! BookListCell
-        let image = try! Data(contentsOf: URL(string: bookData[row].thumbnail!)!)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BookCell", for: indexPath) as!
+        BookListCellinXib
+        let image = try? Data(contentsOf: URL(string: bookData[row].thumbnail ?? "")!)
         cell.selectionStyle = .none
-        cell.index = row
+        cell.index = indexPath
         cell.bookTitle.text = bookData[row].name
         cell.bookAuthor.text = bookData[row].detail
-        cell.bookImage.image = UIImage(data: image)
+        cell.bookThumbnail.image = UIImage(data: image!)
         cell.status = self.status[row]
         cell.delegate = self
         return cell
