@@ -13,8 +13,7 @@ class APIManager {
     init(){}
     
     func getPhotos(_ page: Int, _ query: String, completion: @escaping([UrlInfo]) -> Void){
-        let urlString = "https://api.unsplash.com/search/photos/?page=\(page)&query=\(query)&client_id=\(client_id)"
-        print("urlString = \(urlString)\n")
+        let urlString = "https://api.unsplash.com/search/photos/?page=\(page)&query=\(query)&client_id=\(client_id)&per_page=30"
         guard let url = URL(string: urlString) else { return }
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
