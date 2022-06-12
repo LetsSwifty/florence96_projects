@@ -8,7 +8,7 @@
 import UIKit
 
 class APIManager {
-    let client_id: String = "Hg3p_0zBoc3UHpZn2mAHAcTW0X5H6T0FOuimq10KIIE"
+    let client_id: String = ""
     
     init(){}
     
